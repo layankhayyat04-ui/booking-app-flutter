@@ -1,0 +1,53 @@
+<svg width="1000" height="220" viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1f1a">
+        <animate attributeName="stop-color" values="#0d1f1a;#123227;#0d1f1a" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#123a2e">
+        <animate attributeName="stop-color" values="#123a2e;#175942;#123a2e" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1000" height="220" fill="url(#bg)"/>
+
+  <g opacity="0.12">
+    <circle cx="60" cy="40" r="1.5" fill="#39D98A"/>
+    <circle cx="940" cy="180" r="1.5" fill="#39D98A"/>
+    <circle cx="920" cy="45" r="1.5" fill="#39D98A"/>
+  </g>
+
+  <g transform="translate(80,30)">
+    <rect x="0" y="0" width="100" height="160" rx="14" fill="#0d1512" stroke="#2c5443" stroke-width="1.5"/>
+    <rect x="8" y="12" width="84" height="136" rx="3" fill="#0f1c17"/>
+    <rect x="16" y="22" width="68" height="10" rx="2" fill="#1f4535"/>
+    <rect x="16" y="42" width="68" height="18" rx="2" fill="#1f4535" opacity="0.55">
+      <animate attributeName="opacity" values="0.35;0.65;0.35" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="16" y="66" width="68" height="18" rx="2" fill="#1f4535" opacity="0.35">
+      <animate attributeName="opacity" values="0.55;0.25;0.55" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="16" y="90" width="68" height="18" rx="2" fill="#1f4535" opacity="0.45">
+      <animate attributeName="opacity" values="0.25;0.55;0.25" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="50" cy="130" r="10" fill="#39D98A" opacity="0.85"/>
+  </g>
+
+  <g transform="translate(235,110)" filter="url(#glow)">
+    <circle r="30" fill="none" stroke="#2c5443" stroke-width="3"/>
+    <circle r="30" fill="none" stroke="#39D98A" stroke-width="3" stroke-dasharray="47 141" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M -11 0 L -3 9 L 13 -10" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="330" y="95" font-family="Fira Code, monospace" font-size="34" font-weight="700" fill="#ffffff">Booking App</text>
+  <text x="330" y="130" font-family="Fira Code, monospace" font-size="16" fill="#7fe0ac">Flutter front-end &#183; REST API &#183; Material 3</text>
+  <rect x="330" y="145" width="0" height="3" rx="1.5" fill="#7fe0ac">
+    <animate attributeName="width" values="0;330;330" dur="1.4s" fill="freeze"/>
+  </rect>
+</svg>
